@@ -31,7 +31,7 @@
             header{grid-area: header;}
             .main{grid-area: main;}
 
-            a:link, a:visited {
+            .navButton:link, .navButton:visited, .clickNgo:link, .clickNgo:visited{
                 display: inline-block;
                 border:2px solid;
                 border-radius: 10px;
@@ -44,12 +44,21 @@
                 transition-duration: 0.4s;
                 text-decoration: none;
             }
-            a:hover, a:active {
+            .navButton:hover, .navButton:active, .clickNgo:hover, .clickNgo:active {
                 text-decoration: none;
                 color:#EBEBEB;
                 background-color: #8DA9C4;
             }
-
+            a:link, a:visited{
+                text-decoration: none;
+                color:#1C1F33;
+                transition-duration: 0.4s;
+                margin: 5px 8px;
+            }
+            a:hover,a:active{
+                text-decoration: none;
+                color: #8DA9C4;
+            }
             .grid-container{
                 width: 80%;
                 height: 600px;
@@ -142,13 +151,36 @@
             h1, h2, h3, h4, h5, h6 {
                 color: #1C1F33;
             }
+            #sobre{
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+                align-items: center;
+            }
+            .sectionTitle{
+                width: 95%;
+                height: fit-content;
+                background: repeating-linear-gradient(
+                    45deg,
+                    #EBEBEB,
+                    #EBEBEB 10px,
+                    #8DA9C4 10px,
+                    #8DA9C4 20px 
+                );
+                color: #1C1F33;
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+                border-radius: 20px;
+                text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
         </style>
     </head>
     <body>
         
         <div class="grid-container">
             <div class="filler">
-                <p>encher linguiça</p>
+                <p>Uicons por <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
             </div>
             <header>
                 <div id="info">
@@ -158,15 +190,15 @@
                 </div>
                 <nav>
                     <div id="nav-1">
-                        <a href="https://www.instagram.com/liviacnasc_/"><span class="fi-brands-instagram"></span><br>Instagram</a>
-                        <a href="https://github.com/liviacnasc"><span class="fi-brands-github"></span><br>Github</a>
-                        <a href="https://www.behance.net/lviacavalcante1"> <span class="fi-brands-behance"></span><br>Behance</a>    
+                        <a class="navButton" href="https://www.instagram.com/liviacnasc_/"><span class="fi-brands-instagram"></span><br>Instagram</a>
+                        <a class="navButton" href="https://github.com/liviacnasc"><span class="fi-brands-github"></span><br>Github</a>
+                        <a class="navButton" href="https://www.behance.net/lviacavalcante1"> <span class="fi-brands-behance"></span><br>Behance</a>    
                     </div>
                 
                     <div id="nav-2">
-                        <a href="https://www.instagram.com/liviacnasc_/"><span class="fi-brands-instagram"></span><br>Instagram</a>
-                        <a href="https://github.com/liviacnasc"><span class="fi-brands-github"></span><br>Github</a>
-                        <a href="https://www.behance.net/lviacavalcante1"> <span class="fi-brands-behance"></span><br>Behance</a>    
+                        <a class="navButton" href="https://www.instagram.com/liviacnasc_/"><span class="fi-brands-instagram"></span><br>Instagram</a>
+                        <a class="navButton" href="https://github.com/liviacnasc"><span class="fi-brands-github"></span><br>Github</a>
+                        <a class="navButton" href="https://www.behance.net/lviacavalcante1"> <span class="fi-brands-behance"></span><br>Behance</a>    
                     </div>                
                 </nav>
             </header>
@@ -176,13 +208,22 @@
             <div class="main">
                 <div id="clickNgo" style="display: inline;">
                     <h3>Navegação rápida</h3>
-                    <a href="#sobre">Sobre</a>
-                    <a href="https://github.com/liviacnasc">Github</a>
-                    <a href="https://www.behance.net/lviacavalcante1">Behance</a>    
+                    <a class="clickNgo" href="#sobre">Sobre</a>
+                    <a class="clickNgo" href="https://github.com/liviacnasc">Github</a>
+                    <a class="clickNgo" href="https://www.behance.net/lviacavalcante1">Behance</a>    
                 </div>
                 <div id="sobre">
-                    <h5>Sobre</h5><hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida sollicitudin magna, ut lobortis nunc blandit sed. Ut vitae mi congue, aliquet felis et, blandit ex. Phasellus ut varius lorem. Sed ac posuere libero. Sed nisl ligula, dapibus nec egestas id, dignissim vitae elit. Fusce varius felis sit amet nisi facilisis maximus. Nam id ex enim. Maecenas nec laoreet augue. Donec interdum arcu felis, et lacinia enim cursus in. Sed at venenatis turpis, ac posuere turpis. Nam sed dui sed nulla eleifend posuere sed eget mauris. Proin sodales fermentum sapien. Nullam sagittis auctor euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+                    <p class="sectionTitle">Sobre</p><hr>
+                    <img id="attach" src="eu.jpeg" style="height: 150px;width: 150px; border-radius: 30px;">
+                    <p> Meu nome é Lívia, tenho 18 anos e ainda estou descobrindo o que quero fazer da vida, enquanto tento ao máximo não ser uma pessoa genérica.<br><br>
+                        Extremamente nerd. Gosto de coisas de velho também, tipo crochê. Escuto k-pop. Estudar é meu hobby favorito e gosto de estar perto de pessoas
+                        inteligentes, pois elas me ensinam muito.<br><br>
+                        Na minha breve aventura pela vida, aprendi que devemos nos esforçar para aprender o que não sabemos se aperfeiçoar no que já
+                        temos experiência.
+                        <blockquote>
+                            Faça o que você gosta, gostando do que você faz. <br> - Professor Aécio
+                        </blockquote>
+                    </p>
                 </div>
                 <div id="experiencias">
                     <p>Donec imperdiet semper sollicitudin. Donec et tortor leo. Ut sem lorem, lacinia sed elit eu, suscipit blandit est. Fusce fermentum lectus ipsum, sed accumsan ipsum lacinia finibus. Integer sodales tortor sit amet leo eleifend placerat. Mauris sed varius mauris, et pellentesque neque. Etiam sem tortor, imperdiet non ligula faucibus, suscipit vestibulum mi. Vivamus sed augue vel neque mollis hendrerit et quis neque. Quisque id auctor nibh.</p>
