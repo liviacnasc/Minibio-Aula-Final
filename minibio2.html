@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <head>
+        <link href="/Users/livia/codigos/senai/HTML/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet">
+        <link href="/Users/livia/codigos/senai/HTML/uicons-brands/css/uicons-brands.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500&display=swap');
+
+            @font-face {
+                font-family: 'Ubuntu', sans-serif;
+                src: url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+            }
+            html{
+                background: repeating-linear-gradient(
+                    45deg,
+                    #F5F5F5,
+                    #F5F5F5 10px,
+                    #FCD9E1 10px,
+                    #FCD9E1 20px 
+                );
+                font-family: 'Ubuntu';
+                scroll-behavior: smooth;
+                overflow: hidden;
+            }
+            .filler{grid-area: filler;}
+            header{grid-area: header;}
+            .main{grid-area: main;}
+
+            a:link, a:visited {
+                display: inline-block;
+                border:2px solid;
+                border-radius: 10px;
+                margin: 5px 8px;
+                padding: 5px 10px;
+                background-color: #EBEBEB;
+                color: #ED9390;
+                text-align: center;
+                font-size: 10px;
+                transition-duration: 0.4s;
+                text-decoration: none;
+            }
+            a:hover, a:active {
+                text-decoration: none;
+                color:#EBEBEB;
+                background-color: #8DA9C4;
+            }
+
+            .grid-container{
+                width: 80%;
+                height: 40%;
+                display: grid;
+                grid-template-areas: 
+                'header title '
+                'header main'
+                'filler main';
+                gap: 0px;
+                padding: auto;
+                margin: auto;
+                border-radius: 50px;
+                background-color: #EBEBEB;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            }
+            .grid-container > .filler{
+                background-color: #ED9390;
+                padding: auto;
+                margin: 0px 10px 0px 0px;
+                border-radius: 0px 0px 50px 50px;
+                text-align: center;
+            }
+            .grid-container > header{
+                align-self: stretch;
+                padding: 50px 0px 50px 0px;
+                background-color: #ED9390;
+                margin: 0px 10px 0px 0px;
+                border-radius: 50px 50px 0px 0px;
+                text-align: center;
+                align-items: center;
+            }
+            nav{
+                align-items: center;
+                text-align: left;
+                padding: 11px;
+                background-color: #ED9390;
+                margin: 8px 10px 8px 10px;
+            }
+            .grid-container > .main{
+                width: fit-content;
+                background-color: #EBEBEB;
+                margin: 0px 10px 10px 0px;
+                border-radius: 0px 50px 50px 0px;
+                overflow:scroll;
+                transition-duration: 0.4s;
+            }
+            .grid-container > .title{
+                height: fit-content;
+                align-items: center;
+                font-size: 20px;
+                font-weight: bold;
+                padding-left: 13px;
+                color:#1C1F33;
+                background-color: #8DA9C4;
+                margin: 10px 10px 0px 0px;
+                border-radius: 50px 50px 50px 0px;
+            }
+            .pfp{
+                height: 100px;
+                width: 100px;
+                margin: 10px;
+                vertical-align: text-top;
+                border-radius: 100px;
+                border-width: 3px;
+                border-style: solid;
+                border-color: #EBEBEB;
+            }
+            .nome{
+                color: #1C1F33;
+                font-size: 30px;
+                font-weight: bold;
+                margin: 5px;
+            }
+            ::-webkit-scrollbar{
+                width: 7px;
+            }
+            ::-webkit-scrollbar-thumb{
+                background: #474747;
+                border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb:hover{
+                background: #1C1F33;
+                border-radius: 10px;
+            }
+            #info{
+                padding: 20px 10px 20px 10px;
+                margin: 10px 10px 10px 10px;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #1C1F33;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="grid-container">
+            <div class="filler">
+                <p>encher linguiça</p>
+            </div>
+            <header>
+                <div id="info">
+                    <img class="pfp" src="pfp.jpeg">
+                    <p class="nome">Lívia Cavalcante</p>
+                    <p style="color: #1C1F33;font-weight: 500;">Full-Stack Development e mentoria</p>    
+                </div>
+                <nav>
+                    <div id="nav-1">
+                        <a href="https://www.instagram.com/liviacnasc_/"><span class="fi-brands-instagram"></span><br>Instagram</a>
+                        <a href="https://github.com/liviacnasc"><span class="fi-brands-github"></span><br>Github</a>
+                        <a href="https://www.behance.net/lviacavalcante1"> <span class="fi-brands-behance"></span><br>Behance</a>    
+                    </div>
+                
+                    <div id="nav-2">
+                        <a href="https://www.instagram.com/liviacnasc_/"><span class="fi-brands-instagram"></span><br>Instagram</a>
+                        <a href="https://github.com/liviacnasc"><span class="fi-brands-github"></span><br>Github</a>
+                        <a href="https://www.behance.net/lviacavalcante1"> <span class="fi-brands-behance"></span><br>Behance</a>    
+                    </div>                
+                </nav>
+            </header>
+            <div class="title">
+                <p><span class="fi-rs-angle-small-right"></span> Olá!</p>
+            </div>
+            <div class="main">
+                <div id="clickNgo" style="display: inline;">
+                    <h3>Navegação rápida</h3>
+                    <a href="#sobre">Sobre</a>
+                    <a href="https://github.com/liviacnasc">Github</a>
+                    <a href="https://www.behance.net/lviacavalcante1">Behance</a>    
+                </div>
+                <div id="sobre">
+                    <h5>Sobre</h5><hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida sollicitudin magna, ut lobortis nunc blandit sed. Ut vitae mi congue, aliquet felis et, blandit ex. Phasellus ut varius lorem. Sed ac posuere libero. Sed nisl ligula, dapibus nec egestas id, dignissim vitae elit. Fusce varius felis sit amet nisi facilisis maximus. Nam id ex enim. Maecenas nec laoreet augue. Donec interdum arcu felis, et lacinia enim cursus in. Sed at venenatis turpis, ac posuere turpis. Nam sed dui sed nulla eleifend posuere sed eget mauris. Proin sodales fermentum sapien. Nullam sagittis auctor euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+                </div>
+                <div id="experiencias">
+                    <p>Donec imperdiet semper sollicitudin. Donec et tortor leo. Ut sem lorem, lacinia sed elit eu, suscipit blandit est. Fusce fermentum lectus ipsum, sed accumsan ipsum lacinia finibus. Integer sodales tortor sit amet leo eleifend placerat. Mauris sed varius mauris, et pellentesque neque. Etiam sem tortor, imperdiet non ligula faucibus, suscipit vestibulum mi. Vivamus sed augue vel neque mollis hendrerit et quis neque. Quisque id auctor nibh.</p>
+                </div>
+                <div id="habilidades">
+                    <p>Fusce eu tincidunt lacus. Donec vel mi sed leo mattis maximus. Donec ultrices quis metus auctor ornare. Cras dignissim venenatis libero, in tincidunt justo scelerisque ut. Nullam pretium ipsum quam, eget blandit mi vehicula vel. In hac habitasse platea dictumst. Suspendisse iaculis neque at pellentesque eleifend. Morbi fringilla sit amet ex vel scelerisque. Pellentesque vel maximus dolor. Mauris tincidunt tellus id erat feugiat pellentesque. Ut leo neque, varius at lacus vel, finibus pharetra est. Nam vestibulum porta nisi, eu pellentesque lectus ullamcorper sed. Fusce mi metus, elementum sit amet fermentum vel, dignissim ac nibh. Quisque non facilisis erat, vel dignissim urna. In quis neque sit amet ligula consectetur aliquet.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>
