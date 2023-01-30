@@ -151,11 +151,11 @@
             h1, h2, h3, h4, h5, h6 {
                 color: #1C1F33;
             }
-            #sobre{
+            .section{
                 display: flex;
                 flex-direction: column;
-                text-align: justify;
-                align-items: center;
+                text-align: left;
+                align-items: left;
             }
             .sectionTitle{
                 width: 95%;
@@ -164,15 +164,19 @@
                     45deg,
                     #EBEBEB,
                     #EBEBEB 10px,
-                    #8DA9C4 10px,
-                    #8DA9C4 20px 
+                    #BCCDDC 10px,
+                    #BCCDDC 20px 
                 );
                 color: #1C1F33;
                 font-size: 20px;
                 font-weight: 700;
                 text-align: center;
                 border-radius: 20px;
-                text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                text-align: left;
+                padding-left: 15px;
+            }
+            .coisos{
+                display: inline-block;
             }
         </style>
     </head>
@@ -209,29 +213,32 @@
                 <div id="clickNgo" style="display: inline;">
                     <h3>Navegação rápida</h3>
                     <a class="clickNgo" href="#sobre">Sobre</a>
-                    <a class="clickNgo" href="https://github.com/liviacnasc">Github</a>
-                    <a class="clickNgo" href="https://www.behance.net/lviacavalcante1">Behance</a>    
+                    <a class="clickNgo" href="#experiencias">Experiências</a>
+                    <a class="clickNgo" href="#escolaridade">Escolaridade</a>    
                 </div>
-                <div id="sobre">
-                    <p class="sectionTitle">Sobre</p><hr>
-                    <img id="attach" src="eu.jpeg" style="height: 150px;width: 150px; border-radius: 30px;">
-                    <p> Meu nome é Lívia, tenho 18 anos e ainda estou descobrindo o que quero fazer da vida, enquanto tento ao máximo não ser uma pessoa genérica.<br><br>
-                        Extremamente nerd. Gosto de coisas de velho também, tipo crochê. Escuto k-pop. Estudar é meu hobby favorito e gosto de estar perto de pessoas
-                        inteligentes, pois elas me ensinam muito.<br><br>
+                <div class="section" id="sobre">
+                    <p class="sectionTitle">Sobre</p>
+                    <p> Meu nome é Lívia, tenho 18 anos e ainda estou descobrindo o que quero fazer da vida, enquanto tento não ser uma pessoa genérica.<br><br>
+                        Extremamente nerd. Gosto de coisas de velho também, tipo crochê. Escuto k-pop. Estudar é meu hobby favorito e gosto de estar perto de pessoas 
+                        inteligentes, pois elas me ensinam muito. <br><br>
                         Na minha breve aventura pela vida, aprendi que devemos nos esforçar para aprender o que não sabemos se aperfeiçoar no que já
                         temos experiência.
-                        <blockquote>
-                            Faça o que você gosta, gostando do que você faz. <br> - Professor Aécio
-                        </blockquote>
                     </p>
                 </div>
-                <div id="experiencias">
-                    <p class="sectionTitle">Experiências</p><hr>
-                    <p>Donec imperdiet semper sollicitudin. Donec et tortor leo. Ut sem lorem, lacinia sed elit eu, suscipit blandit est. Fusce fermentum lectus ipsum, sed accumsan ipsum lacinia finibus. Integer sodales tortor sit amet leo eleifend placerat. Mauris sed varius mauris, et pellentesque neque. Etiam sem tortor, imperdiet non ligula faucibus, suscipit vestibulum mi. Vivamus sed augue vel neque mollis hendrerit et quis neque. Quisque id auctor nibh.</p>
+                <div class="section" id="experiencias">
+                    <p class="sectionTitle"><span class=""></span> Experiências</p>
+                    <p><b>Aprendiz</b><br>Monitoria das Equipes de Robótica, SESI Parangaba</p>
+                </div>
+                <div class="section" id="escolaridade">
+                    <p class="sectionTitle">Escolaridade</p>
+                    <p><b>(Cursando) Bacharelado em Engenharia Mecatrônica </b><br> Instituto Federal de Educação, Ciência e Tecnologia <br>2022.2 - Atualmente</p>
                 </div>
                 <div id="habilidades">
                     <p>Fusce eu tincidunt lacus. Donec vel mi sed leo mattis maximus. Donec ultrices quis metus auctor ornare. Cras dignissim venenatis libero, in tincidunt justo scelerisque ut. Nullam pretium ipsum quam, eget blandit mi vehicula vel. In hac habitasse platea dictumst. Suspendisse iaculis neque at pellentesque eleifend. Morbi fringilla sit amet ex vel scelerisque. Pellentesque vel maximus dolor. Mauris tincidunt tellus id erat feugiat pellentesque. Ut leo neque, varius at lacus vel, finibus pharetra est. Nam vestibulum porta nisi, eu pellentesque lectus ullamcorper sed. Fusce mi metus, elementum sit amet fermentum vel, dignissim ac nibh. Quisque non facilisis erat, vel dignissim urna. In quis neque sit amet ligula consectetur aliquet.</p>
                 </div>
+                <blockquote>
+                    Faça o que você gosta, gostando do que você faz. <br> - Professor Aécio
+                </blockquote>
             </div>
         </div>
         <script>
