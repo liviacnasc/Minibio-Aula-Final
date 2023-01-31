@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <head>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +28,24 @@
                 scroll-behavior: smooth;
                 overflow: hidden;
             }
-            .filler{grid-area: filler;}
-            header{grid-area: header;}
-            .main{grid-area: main;}
-
+            ::-webkit-scrollbar{
+                width: 7px;
+            }
+            ::-webkit-scrollbar-thumb{
+                background: #474747;
+                border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb:hover{
+                background: #1C1F33;
+                border-radius: 10px;
+            }
+            #info{
+                padding: 20px 10px 20px 10px;
+                margin: 10px 10px 10px 10px;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #1C1F33;
+            }
             .navButton:link, .navButton:visited, .clickNgo:link, .clickNgo:visited{
                 display: inline-block;
                 border:2px solid;
@@ -59,6 +74,9 @@
                 text-decoration: none;
                 color: #8DA9C4;
             }
+            .filler{grid-area: filler;}
+            header{grid-area: header;}
+            .main{grid-area: main;}
             .grid-container{
                 width: 80%;
                 height: 600px;
@@ -133,24 +151,6 @@
                 font-weight: bold;
                 margin: 5px;
             }
-            ::-webkit-scrollbar{
-                width: 7px;
-            }
-            ::-webkit-scrollbar-thumb{
-                background: #474747;
-                border-radius: 10px;
-            }
-            ::-webkit-scrollbar-thumb:hover{
-                background: #1C1F33;
-                border-radius: 10px;
-            }
-            #info{
-                padding: 20px 10px 20px 10px;
-                margin: 10px 10px 10px 10px;
-            }
-            h1, h2, h3, h4, h5, h6 {
-                color: #1C1F33;
-            }
             .section{
                 display: flex;
                 flex-direction: column;
@@ -175,8 +175,24 @@
                 text-align: left;
                 padding-left: 15px;
             }
-            .coisos{
-                display: inline-block;
+            .tabHab{
+                width: 100%;
+                text-align: left;
+                vertical-align: middle;
+            }
+            .habColuna{
+                background-color: #ED9390;
+                color: #1C1F33;
+                border-radius: 20px;
+                padding: 10px;
+                margin: 10px 10px 10px 10px;
+                border: 2px #EBEBEB solid;
+            }
+            .nivelColuna{
+                color: #1C1F33;
+                padding: 10px;
+                margin: 10px;
+                align-content: center;
             }
         </style>
     </head>
@@ -214,7 +230,8 @@
                     <h3>Navegação rápida</h3>
                     <a class="clickNgo" href="#sobre">Sobre</a>
                     <a class="clickNgo" href="#experiencias">Experiências</a>
-                    <a class="clickNgo" href="#escolaridade">Escolaridade</a>    
+                    <a class="clickNgo" href="#escolaridade">Escolaridade</a> 
+                    <a class="clickNgo" href="#linguagens">Habilidades</a>   
                 </div>
                 <div class="section" id="sobre">
                     <p class="sectionTitle">Sobre</p>
@@ -233,16 +250,102 @@
                     <p class="sectionTitle">Escolaridade</p>
                     <p><b>(Cursando) Bacharelado em Engenharia Mecatrônica </b><br> Instituto Federal de Educação, Ciência e Tecnologia <br>2022.2 - Atualmente</p>
                 </div>
-                <div id="habilidades">
-                    <p>Fusce eu tincidunt lacus. Donec vel mi sed leo mattis maximus. Donec ultrices quis metus auctor ornare. Cras dignissim venenatis libero, in tincidunt justo scelerisque ut. Nullam pretium ipsum quam, eget blandit mi vehicula vel. In hac habitasse platea dictumst. Suspendisse iaculis neque at pellentesque eleifend. Morbi fringilla sit amet ex vel scelerisque. Pellentesque vel maximus dolor. Mauris tincidunt tellus id erat feugiat pellentesque. Ut leo neque, varius at lacus vel, finibus pharetra est. Nam vestibulum porta nisi, eu pellentesque lectus ullamcorper sed. Fusce mi metus, elementum sit amet fermentum vel, dignissim ac nibh. Quisque non facilisis erat, vel dignissim urna. In quis neque sit amet ligula consectetur aliquet.</p>
+                <div id="linguagens">
+                    <p class="sectionTitle">Linguagens</p>
+                    <table class="tabHab">
+                        <tr>
+                            <td class="habColuna">
+                                <span class="fi-brands-c"></span> Linguagem C
+                            </td>
+                            <td class="nivelColuna">
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi-rs-circle-small"></span>
+                                <span class="fi-rs-circle-small"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="habColuna">
+                                <span class="fi-brands-java"></span> Java
+                            </td>
+                            <td class="nivelColuna">
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi-rs-circle-small"></span>
+                                <span class="fi-rs-circle-small"></span>
+                                <span class="fi-rs-circle-small"></span>
+                                <span class="fi-rs-circle-small"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="habColuna">
+                                <span class="fi-brands-html5"></span> HTML
+                            </td>
+                            <td class="nivelColuna">
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi-rs-circle-half-stroke"></span>
+                                <span class="fi-rs-circle-small"></span>
+                                <span class="fi-rs-circle-small"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="habColuna">
+                                <span class="fi-brands-css3-alt"></span> CSS
+                            </td>
+                            <td class="nivelColuna">
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi-rs-circle-half-stroke"></span>
+                                <span class="fi-rs-circle-small"></span>
+                                <span class="fi-rs-circle-small"></span>
+                            </td>
+                        </tr>
+                        
+                    </table>
                 </div>
-                <blockquote>
-                    Faça o que você gosta, gostando do que você faz. <br> - Professor Aécio
-                </blockquote>
+                <div id="softwares">
+                    <p class="sectionTitle">Softwares</p>
+                    <table class="tabHab">
+                        <tr>
+                            <td class="habColuna">
+                                <span class="fi-brands-illustrator"></span> Adobe Illustrator
+                            </td>
+                            <td class="nivelColuna">
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi-rs-circle-small"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="habColuna">
+                                <span class="fi-brands-photoshop"></span> Adobe Photoshop
+                            </td>
+                            <td class="nivelColuna">
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi-rs-circle-half-stroke"></span>
+                                <span class="fi-rs-circle-small"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="habColuna">
+                                <span class="fi-rs-file"></span> Pacote Office
+                            </td>
+                            <td class="nivelColuna">
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                                <span class="fi fi-ss-circle"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
-        <script>
-            
-        </script>
     </body>
 </html>
